@@ -32,7 +32,7 @@ jobs:
         run: python scripts/update_ads.py
       - name: Commit archive and candidate ledger
         run: |
-          if git diff --quiet data/ads.json data/seen.json; then
+          if [ -z "$(git status --porcelain -- data/ads.json data/seen.json)" ]; then
             echo "No changes"
             exit 0
           fi
