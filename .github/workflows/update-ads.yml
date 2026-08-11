@@ -26,9 +26,9 @@ jobs:
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          LOOKBACK_HOURS: '48'
-          MAX_PER_QUERY: '8'
-          MAX_ANALYZE: '8'
+          LOOKBACK_HOURS: '168'
+          MAX_PER_QUERY: '10'
+          MAX_ANALYZE: '16'
         run: python scripts/update_ads.py
       - name: Commit new archive entries
         run: |
