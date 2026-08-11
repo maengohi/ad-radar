@@ -1,1 +1,1 @@
-Trigger the editorial-source AD RADAR crawl after Ads of the World discovery was added.
+Trigger Vimeo-enabled AD RADAR crawl after VIMEO_ACCESS_TOKEN was configured.
