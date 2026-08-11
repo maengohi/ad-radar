@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="한국을 제외한 미국·영국·일본·태국 광고를 매일 큐레이션하는 개인 광고 아카이브" />
+  <title>AD RADAR</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Sans+KR:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="noise"></div>
+  <header class="topbar">
+    <a class="brand" href="#">AD RADAR<span class="dot">●</span></a>
+    <div class="status-wrap"><span class="pulse"></span><span id="updateLabel">DAILY CRAWL</span></div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow">PERSONAL CREATIVE INTELLIGENCE / KR TRANSLATED</div>
+      <h1>광고를 모으지 않고,<br><em>쓸 만한 사고방식</em>을 모읍니다.</h1>
+      <p class="hero-copy">USA · UK · JAPAN · THAILAND. 매일 새 광고를 훑고, 비주얼·카피·연출·편집·VFX·아이디어 중 하나라도 건질 것이 있는 작업만 남깁니다.</p>
+      <div class="hero-stats">
+        <div><b id="totalCount">0</b><span>ARCHIVED</span></div>
+        <div><b id="todayCount">0</b><span>TODAY</span></div>
+        <div><b id="savedCount">0</b><span>SAVED</span></div>
+      </div>
+    </section>
+
+    <section class="controls" aria-label="광고 필터">
+      <div class="country-row" id="countryFilters">
+        <button class="chip active" data-country="ALL">ALL</button>
+        <button class="chip" data-country="JP">🇯🇵 JAPAN</button>
+        <button class="chip" data-country="TH">🇹🇭 THAILAND</button>
+        <button class="chip" data-country="US">🇺🇸 USA</button>
+        <button class="chip" data-country="GB">🇬🇧 UK</button>
+      </div>
+      <div class="tool-row">
+        <div class="searchbox">
+          <span>⌕</span>
+          <input id="searchInput" type="search" placeholder="예: 편집 반전, 이상한 캐스팅, 일본 카피…" autocomplete="off" />
+        </div>
+        <select id="tagFilter" aria-label="영감 태그">
+          <option value="ALL">ALL INSPIRATION</option>
+          <option>IDEA</option><option>COPY</option><option>DIRECTION</option><option>ART</option>
+          <option>CINEMATOGRAPHY</option><option>EDIT</option><option>VFX</option><option>AI</option>
+          <option>COMEDY</option><option>STORYTELLING</option><option>SCALE</option><option>WEIRD</option>
+        </select>
+        <button id="savedToggle" class="save-filter">♡ MY ARCHIVE</button>
+      </div>
+    </section>
+
+    <section class="feed-head">
+      <div>
+        <div class="eyebrow" id="feedEyebrow">LATEST / ALL COUNTRIES</div>
+        <h2 id="feedTitle">오늘 건질 광고</h2>
+      </div>
+      <div class="result-count"><span id="resultCount">0</span> RESULTS</div>
+    </section>
+
+    <section id="grid" class="grid" aria-live="polite"></section>
+    <section id="empty" class="empty hidden">
+      <b>NO SIGNAL</b>
+      <p>이 조건에 걸리는 광고가 없습니다. 필터를 조금 느슨하게 해보세요.</p>
+    </section>
+  </main>
+
+  <template id="cardTemplate">
+    <article class="card">
+      <a class="thumb-wrap" target="_blank" rel="noopener noreferrer">
+        <img class="thumb" loading="lazy" alt="" />
+        <div class="country-badge"></div>
+        <div class="score-badge"><span class="score"></span><small>RADAR</small></div>
+        <div class="play">▶</div>
+      </a>
+      <div class="card-body">
+        <div class="meta"><span class="brand-name"></span><span class="date"></span></div>
+        <h3 class="title"></h3>
+        <div class="tags"></div>
+        <p class="why"></p>
+        <div class="copy-box hidden">
+          <div class="copy-label">COPY</div>
+          <p class="original-copy"></p>
+          <p class="ko-copy"></p>
+          <p class="copy-note"></p>
+        </div>
+        <div class="details">
+          <div><span>AGENCY</span><b class="agency"></b></div>
+          <div><span>DIRECTOR</span><b class="director"></b></div>
+        </div>
+        <div class="card-actions">
+          <a class="watch" target="_blank" rel="noopener noreferrer">WATCH ↗</a>
+          <button class="save-btn">♡ SAVE</button>
+        </div>
+      </div>
+    </article>
+  </template>
+
+  <footer>
+    <div>AD RADAR / PERSONAL REFERENCE SYSTEM</div>
+    <div>USA · UK · JAPAN · THAILAND</div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
