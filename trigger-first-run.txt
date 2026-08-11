@@ -1,0 +1,1 @@
+Trigger the first AD RADAR crawl after API secrets were configured.
