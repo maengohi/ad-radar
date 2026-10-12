@@ -1,5 +1,38 @@
 [
   {
+    "source_kind": "youtube",
+    "country": "JP",
+    "video_id": "U47DU1vC4l8",
+    "url": "https://www.youtube.com/watch?v=U47DU1vC4l8",
+    "watch_url": "https://www.youtube.com/watch?v=U47DU1vC4l8",
+    "video_title": "【デュエマ】DM26-EX4 切札不滅!! デュエキング FOREVER 2026【DM】",
+    "description": "「切札不滅!! デュエキング FOREVER 2026」のCMを公開！ https://dm.takaratomy.co.jp/product/dm26ex4/ デュエチューブの公式 ...",
+    "channel": "デュエチューブ-DM公式-",
+    "published_at": "2026-10-11T06:00:09Z",
+    "thumbnail": "https://i.ytimg.com/vi/U47DU1vC4l8/hqdefault.jpg",
+    "is_reference_work": true,
+    "work_type": "AD",
+    "source_confidence": 95,
+    "freshness_confidence": 90,
+    "keep": true,
+    "brand": "Duel Masters",
+    "campaign": "切札不滅!! デュエキング FOREVER 2026",
+    "radar_score": 75,
+    "tags": [
+      "MOTION",
+      "EDIT",
+      "ART"
+    ],
+    "why_ko": "빠른 템포의 보컬 비트에 맞춰 카드명과 타이포그래피를 격렬하게 연동시키는 모션 그래픽 연출입니다. 정적인 카드 일러스트 레이어를 입체적으로 분리하고, 화면 진동과 지퍼 형태의 전환 효과를 결합해 압도적인 속도감과 힙합/락 테이스트의 에너지를 전달합니다. 프로모션 영상에서 정적 그래픽 자산을 dynamic한 모션으로 전환할 때 유용하게 레퍼런스할 수 있습니다.",
+    "copy_original": "切札不滅!! 今からデュエマをはじめようぜ",
+    "copy_ko": "필살 카드는 불멸!! 지금부터 듀에마를 시작하자",
+    "copy_note_ko": "신규 및 복귀 유저를 겨냥해 브랜드 타깃 확장 메시지를 직관적이고 리드미컬하게 전달하는 라임 구조의 훅 카피입니다.",
+    "agency": "UNKNOWN",
+    "director": "UNKNOWN",
+    "id": "7f6de9996210",
+    "discovered_at": "2026-10-12T00:42:41.256805+00:00"
+  },
+  {
     "source_kind": "aotw",
     "country": "US",
     "source_url": "https://www.adsoftheworld.com/campaigns/halloween-mode",
