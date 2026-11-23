@@ -4,6 +4,11 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  # 크롤러 봇(GITHUB_TOKEN)이 한 push는 다른 워크플로를 깨우지 않는다.
+  # 그래서 크롤이 끝나면 배포가 따라 돌도록 workflow_run으로 연결한다.
+  workflow_run:
+    workflows: ["Daily AD RADAR crawl"]
+    types: [completed]
 
 permissions:
   contents: read
@@ -17,6 +22,7 @@ concurrency:
 
 jobs:
   deploy:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -24,6 +30,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
+        with:
+          ref: main
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload Pages artifact
